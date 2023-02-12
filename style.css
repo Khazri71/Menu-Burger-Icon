@@ -1,0 +1,60 @@
+/*Variables*/
+:root {
+  --main-color-one: #ddd;
+  --main-color-two: rgb(3, 3, 65);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color-one);
+}
+
+.menu-burger {
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 4s ease;
+}
+.menu-burger span {
+  position: absolute;
+  width: inherit;
+  height: 7px;
+  background-color: var(--main-color-two);
+  border-radius: 10px;
+}
+
+.menu-burger span:first-child {
+  top: 0;
+  background-color: #273273;
+}
+.menu-burger span:nth-child(2) {
+  top: 21px;
+  background-color: #829fd9;
+}
+.menu-burger span:last-child {
+  bottom: 0;
+  background-color: #4e64a6;
+}
+
+.menu-burger:hover {
+  cursor: pointer;
+}
+.menu-burger:hover span:first-child,
+.menu-burger:hover span:last-child {
+  top: 21px;
+}
+.menu-burger:hover span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-burger:hover span:last-child {
+  transform: rotate(-45deg);
+}
+.menu-burger:hover span:nth-child(2) {
+  opacity: 0;
+}
